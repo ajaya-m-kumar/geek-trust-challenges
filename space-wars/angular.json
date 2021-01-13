@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "space-wars"
+  "defaultProject": "space-wars",
+  "cli": {
+    "analytics": "2ab116ef-fc50-4193-942f-67c5ae5609e3"
+  }
 }

@@ -20,7 +20,7 @@
     max-width: 100vw;
     overflow:auto;
     mat-card{
-      background: url('/assets/images/background.jpg') no-repeat;
+      background: url('^/assets/images/background.jpg') no-repeat;
       background-size: 1920px 1080px;
       box-shadow: 0 0 2px #848498,
       0 2px 5px#8484A8,
@@ -49,7 +49,7 @@
         justify-content: space-between;
         display: flex;
         .planet {
-          background: url('/assets/images/planets.png') no-repeat;
+          background: url('^/assets/images/planets.png') no-repeat;
           width: 125px;
           height: 125px;
           background-size: 640px 390px;
@@ -83,7 +83,7 @@
           .vehicle-chosen{
             width: 125px;
             height: 160px;
-            background: url('/assets/images/vehicles.png') no-repeat;
+            background: url('^/assets/images/vehicles.png') no-repeat;
             background-size: 577px 433px;
             &.vehicle-space-pod{
               filter: drop-shadow(2px 4px 16px silver);

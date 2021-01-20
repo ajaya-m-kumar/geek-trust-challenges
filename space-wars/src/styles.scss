@@ -28,10 +28,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
             padding: 5px;
             margin-right: 10px;
             height: 70px;
-            background: url('/assets/images/background.jpg') no-repeat;
+            background: url('^/assets/images/background.jpg') no-repeat;
             background-size:  1920px 1080px;
             .image-of-donlon{
-              background: url('/assets/images/planets.png') no-repeat;
+              background: url('^/assets/images/planets.png') no-repeat;
               background-size:  640px 390px;
               background-position:-24px -61px;
               width: 125px;
@@ -39,7 +39,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
               transform: scale(.4) translate(-100px, -60px);
             }
             .image-of-enchai{
-              background: url('/assets/images/planets.png') no-repeat;
+              background: url('^/assets/images/planets.png') no-repeat;
               background-size:  640px 390px;
               background-position: -142px -214px;
               width: 125px;
@@ -47,7 +47,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
               transform: scale(.4) translate(-100px, -45px);
             }
             .image-of-pingasor{
-              background: url('/assets/images/planets.png') no-repeat;
+              background: url('^/assets/images/planets.png') no-repeat;
               background-size:  640px 390px;
               background-position: -273px -220px;
               width: 125px;
@@ -55,7 +55,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
               transform: scale(.4) translate(-100px, -45px);
             }
             .image-of-lerbin{
-              background: url('/assets/images/planets.png') no-repeat;
+              background: url('^/assets/images/planets.png') no-repeat;
               background-size:  640px 390px;
               background-position: -393px -216px;
               width: 125px;
@@ -63,7 +63,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
               transform: scale(.4) translate(-100px, -45px);
             }
             .image-of-sapir{
-              background: url('/assets/images/planets.png') no-repeat;
+              background: url('^/assets/images/planets.png') no-repeat;
               background-size:  640px 390px;
               background-position: -505px -58px;
               width: 125px;
@@ -71,7 +71,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
               transform: scale(.4) translate(-100px, -45px);
             }
             .image-of-jebing{
-              background: url('/assets/images/planets.png') no-repeat;
+              background: url('^/assets/images/planets.png') no-repeat;
               background-size:  640px 390px;
               background-position: -268px -64px;
               width: 125px;
@@ -113,10 +113,10 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
             padding: 5px;
             margin-right: 10px;
             height: 90px;
-            background: url('/assets/images/background.jpg') no-repeat;
+            background: url('^/assets/images/background.jpg') no-repeat;
             background-size:  1920px 1080px;
             .image-of-space-pod{
-              background: url('/assets/images/vehicles.png') no-repeat;
+              background: url('^/assets/images/vehicles.png') no-repeat;
               background-size:  577px 433px;
               background-position:-145px -37px;
               width: 125px;
@@ -124,7 +124,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
               transform: scale(.4) translate(-75px, -60px);
             }
             .image-of-space-shuttle{
-              background: url('/assets/images/vehicles.png') no-repeat;
+              background: url('^/assets/images/vehicles.png') no-repeat;
               background-size:  577px 433px;
               background-position: -436px -225px;
               width: 125px;
@@ -132,7 +132,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
               transform: scale(.4) translate(-75px, -45px);
             }
             .image-of-space-rocket{
-              background: url('/assets/images/vehicles.png') no-repeat;
+              background: url('^/assets/images/vehicles.png') no-repeat;
               background-size:  577px 433px;
               background-position:  -8px -40px;
               width: 125px;
@@ -140,7 +140,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
               transform: scale(.4) translate(-75px, -45px);
             }
             .image-of-space-ship{
-              background: url('/assets/images/vehicles.png') no-repeat;
+              background: url('^/assets/images/vehicles.png') no-repeat;
               background-size:  577px 433px;
               background-position: -447px -38px;
               width: 125px;

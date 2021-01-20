@@ -27,6 +27,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
+            "deployUrl": "https://ajaya-m-kumar.github.io/geek-trust-challenges/",
             "assets": [
               "src/favicon.ico",
               "src/assets"

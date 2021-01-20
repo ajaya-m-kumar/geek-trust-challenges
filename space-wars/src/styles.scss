@@ -1,1 +1,204 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.cdk-overlay-container{
+  .mat-dialog-container{
+    background: transparent;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 5px white;
+  }
+  .mat-select-panel-wrap{
+    .mat-option{
+      &.mat-selected{
+        color: gold;
+      }
+    }
+    .planet-dropdown{
+      .mat-option{
+        height: 70px;
+        margin: 5px;
+        padding-left: 0;;
+        border: 1px solid grey;
+        .planetary-details{
+          display: flex;
+          .planet-image{
+            width: 45px;
+            padding: 5px;
+            margin-right: 10px;
+            height: 70px;
+            background: url('/assets/images/background.jpg') no-repeat;
+            background-size:  1920px 1080px;
+            .image-of-donlon{
+              background: url('/assets/images/planets.png') no-repeat;
+              background-size:  640px 390px;
+              background-position:-24px -61px;
+              width: 125px;
+              height: 125px;
+              transform: scale(.4) translate(-100px, -60px);
+            }
+            .image-of-enchai{
+              background: url('/assets/images/planets.png') no-repeat;
+              background-size:  640px 390px;
+              background-position: -142px -214px;
+              width: 125px;
+              height: 125px;
+              transform: scale(.4) translate(-100px, -45px);
+            }
+            .image-of-pingasor{
+              background: url('/assets/images/planets.png') no-repeat;
+              background-size:  640px 390px;
+              background-position: -273px -220px;
+              width: 125px;
+              height: 125px;
+              transform: scale(.4) translate(-100px, -45px);
+            }
+            .image-of-lerbin{
+              background: url('/assets/images/planets.png') no-repeat;
+              background-size:  640px 390px;
+              background-position: -393px -216px;
+              width: 125px;
+              height: 125px;
+              transform: scale(.4) translate(-100px, -45px);
+            }
+            .image-of-sapir{
+              background: url('/assets/images/planets.png') no-repeat;
+              background-size:  640px 390px;
+              background-position: -505px -58px;
+              width: 125px;
+              height: 125px;
+              transform: scale(.4) translate(-100px, -45px);
+            }
+            .image-of-jebing{
+              background: url('/assets/images/planets.png') no-repeat;
+              background-size:  640px 390px;
+              background-position: -268px -64px;
+              width: 125px;
+              height: 125px;
+              transform: scale(.4) translate(-100px, -45px);
+            }
+          }
+          .planet-stats{
+            display: block;
+            .planet-name{
+              font-weight: 700;
+              height: 10px;
+            }
+            .planet-distance{ 
+              margin-top:10px;
+              height: 10px;
+              font-style: italic;
+            }
+            .planet-already-assigned{
+              margin-top:10px;
+              height: 10px;
+              font-style: italic;
+              color: orange;
+            }
+          }
+        }
+      }
+    }
+    .vehicle-dropdown{
+      .mat-option{
+        height: 100px;
+        margin: 5px;
+        padding-left: 0;;
+        border: 1px solid grey;
+        .transportation-details{
+          display: flex;
+          .vehicle-image{
+            width: 65px;
+            padding: 5px;
+            margin-right: 10px;
+            height: 90px;
+            background: url('/assets/images/background.jpg') no-repeat;
+            background-size:  1920px 1080px;
+            .image-of-space-pod{
+              background: url('/assets/images/vehicles.png') no-repeat;
+              background-size:  577px 433px;
+              background-position:-145px -37px;
+              width: 125px;
+              height: 125px;
+              transform: scale(.4) translate(-75px, -60px);
+            }
+            .image-of-space-shuttle{
+              background: url('/assets/images/vehicles.png') no-repeat;
+              background-size:  577px 433px;
+              background-position: -436px -225px;
+              width: 125px;
+              height: 125px;
+              transform: scale(.4) translate(-75px, -45px);
+            }
+            .image-of-space-rocket{
+              background: url('/assets/images/vehicles.png') no-repeat;
+              background-size:  577px 433px;
+              background-position:  -8px -40px;
+              width: 125px;
+              height: 125px;
+              transform: scale(.4) translate(-75px, -45px);
+            }
+            .image-of-space-ship{
+              background: url('/assets/images/vehicles.png') no-repeat;
+              background-size:  577px 433px;
+              background-position: -447px -38px;
+              width: 125px;
+              height: 125px;
+              transform: scale(.4) translate(-75px, -45px);
+            }
+          }
+          .vehicle-stats{
+          display: block;
+          .vehicle-name{
+            font-weight: 700;
+            height: 10px;
+            .vehicle-units{
+              font-style: italic;
+            }
+          }
+          .vehicle-speed{
+            margin-top:10px;
+            height: 10px;
+            font-style: italic;
+          }
+          .vehicle-max-distance{
+            height: 10px;
+            margin-top:10px;
+            font-style: italic;
+          }
+          .vehicle-incapable{
+            height: 10px;
+            margin-top:10px;
+            font-style: italic;
+            color: red;
+          }
+          }
+        }
+      }
+    }
+  }
+}
+mat-toolbar.mat-toolbar{
+  background: black;
+  box-shadow: 0 0 10px #b8512a;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

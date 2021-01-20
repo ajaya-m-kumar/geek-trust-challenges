@@ -1,0 +1,70 @@
+.search-results{
+    width: 25vw;
+    backdrop-filter: blur(10px);
+    background: transparent;
+    margin-left: 35vw;
+    margin-top: 15vh;
+    &.elated{
+        box-shadow: 0 0 2px green, 0 0 5px turquoise, 0 0 10px aliceblue;
+        animation-name: flowing-with-joy;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;      
+    }
+    &.mad{
+        box-shadow: 0 0 2px red, 0 0 5px orange, 0 0 10px yellow;
+        animation-name: brimming-with-anger;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;      
+    }
+    .king-shans-response {
+        margin: 10px 0;
+        &.happy{
+            color: green;
+            padding: 5px;
+        }
+        &.angry{
+            color: red;
+            padding: 5px;
+        }
+        .time-taken{
+            padding: 5px;
+            border: 3px solid #21e578;
+            border-radius: 9px;
+            margin: 10px 0;
+        }
+        .planet-found{
+            padding: 5px;
+            border: 3px solid #21e578;
+            border-radius: 9px;
+        }
+        .wasted-resources{
+            padding: 5px;
+            .planets-visited,.resources-utilized,.time-wasted{
+                color: red;
+            }
+        }
+    }
+}
+
+@keyframes brimming-with-anger {
+  from {
+        box-shadow: 0 0 2px red, 0 0 5px orange, 0 0 10px yellow;
+        transform: scale(1.03);
+    }
+  to {
+      box-shadow: 0 0 2px yellow, 0 0 5px orange, 0 0 10px red;
+      transform: scale(1);
+    }
+}
+@keyframes flowing-with-joy {
+  from {
+      box-shadow: 0 0 2px green, 0 0 5px turquoise, 0 0 10px aliceblue;
+      transform: scale(1.03);
+    }
+  to {
+      box-shadow: 0 0 2px aliceblue, 0 0 5px turquoise, 0 0 10px green;
+      transform: scale(1);
+    }
+}

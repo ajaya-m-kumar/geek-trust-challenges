@@ -1,0 +1,46 @@
+.hyperlink-reference{
+    color: white;
+}
+.resource-list{
+    display:flex;
+    .planets{
+        width:40%;
+        border: 1px solid white;
+        margin-right:20px;
+        .planet{
+            padding:5px;
+            .name{
+                color: gold;
+            }
+            .distance{
+                font-style:italic;
+            }
+        }
+    }
+    .vehicles{
+        width:60%;
+        border: 1px solid white;
+        .vehicle{
+            display: grid;
+            padding:5px;
+            grid-template-areas: 'nm nm nm'
+            'dist rng spd';
+            .name{
+                color: gold;
+                grid-area: nm;
+            }
+            .distance{
+                font-style:italic;
+                grid-area: dist;
+            }
+            .range{
+                grid-area: rng;
+                font-style:italic;
+            }
+            .speed{
+                grid-area: spd;
+                font-style:italic;
+            }
+        }
+    }
+}

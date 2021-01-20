@@ -1,0 +1,61 @@
+<div *ngIf="searchResult.status === 'success'">
+    <mat-card class="search-results elated">
+        <mat-card-header>
+            <mat-card-title>SUCCESS</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="king-shans-response happy">
+                Success! Congratulations on finding Falcone. King Shan is mighty Pleased.
+                <div class="time-taken">
+                    <mat-icon aria-hidden="false" aria-label="Time Taken to find Falcone">timelapse</mat-icon>
+                    Time Taken: {{searchResult.timeTaken}}
+                </div>
+                <div class="planet-found">
+                    <mat-icon aria-hidden="false" aria-label="Time Taken to find Falcone">motion_photos_on</mat-icon>
+
+                    Planet Found: {{searchResult.planet_name}}
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button color="accent" [routerLink]="route">Release Falcone, we can track her down again</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+<div *ngIf="searchResult.status === 'false'">
+    <mat-card class="search-results mad">
+        <mat-card-header>
+            <mat-card-title>FAILURE</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <div class="king-shans-response angry">
+                King Shan is not pleased with the results of these expeditions.
+                <div class="wasted-resources">
+                    <ul class="planets-visited">
+                        We visited these Planets
+                        <li *ngFor="let planet of searchResult.planet_names">
+                            {{planet}}
+                        </li>
+                    </ul>
+                    <ul class="resources-utilized">
+                        Exhausted these vehicles
+                        <li *ngFor="let vehicle of searchResult.vehicle_names">
+                            {{vehicle}}
+                        </li>
+                    </ul>
+                    <div class="time-wasted">
+                        And wasted how many hours ?
+                        <mat-icon aria-hidden="false" aria-label="Time Wasted">timelapse</mat-icon>
+                        Time Wasted: {{searchResult.timeTaken}}
+                    </div>
+                </div>
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-raised-button matTooltip="And don't disappoint me again!!" color="accent" [routerLink]="route">Start searching again</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+<div *ngIf="searchResult.status === 'loading'">
+ Loading search screen
+</div>

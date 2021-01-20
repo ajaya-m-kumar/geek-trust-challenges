@@ -1,0 +1,103 @@
+<div class="info-and-call-to-action">
+  <span class="total-time-taken">Time Taken to Search: {{totalRequiredTime}} hours</span>
+  <button class="button pull-right" disabled="{{cannotFindFalcone}}" (click)="findFalcone()" mat-raised-button color="accent">Find Falcone !!!</button>
+</div>
+<div class="expeditions">
+    <div *ngFor='let expedition of expeditions'>
+        <mat-card class="expedition-details">
+            <mat-card-header>
+                <mat-card-title>{{expedition.title}}</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="planets-and-vehicles">
+                    <div *ngIf="expedition.planet; else planetNotChosen" class="planet-chosen">
+                        <div class="planet planet-{{expedition.planet.toLowerCase()}}">
+                        </div>
+                        <div  class="vehicle">
+                          <div *ngIf="expedition.vehicle; else vehicleNotChosen" >
+                            <div class="vehicle-chosen vehicle-{{expedition.vehicle.split(' ').join('-').toLowerCase()}}">
+                            </div>
+                          </div>
+                          <ng-template #vehicleNotChosen class="vehicle-not-chosen">
+                            <div class="vehicle-not-chosen">
+                            </div>
+                          </ng-template>
+                        </div>
+                    </div> 
+                    <ng-template #planetNotChosen>
+                        <div class="planet-not-chosen">
+                        </div>
+                    </ng-template>
+                </div>
+            </mat-card-content>
+            <mat-card-actions>
+                <form class="actions">
+                    <mat-form-field class="mat-select-button">
+                        <mat-label>Planets</mat-label>
+                        <mat-select id="expedition.id" [(ngModel)]="expedition.planet" [formControl]="planetsDropDown" (selectionChange)="chosenPlanetChanged(expedition)" (closed)="onClosingPlanetsDropdown()">
+                        <hr/>
+                          <mat-form-field class="input-filter">
+                            <input matInput [formControl]="planetControl" type="text" name="filter-options" id="filter-options" placeholder="Search">
+                          </mat-form-field>
+                          <hr/>
+                          <div class="planet-dropdown">
+                            <mat-option *ngFor="let option of filteredPlanets | async" [disabled]="planetAlreadyAssigned(option, expedition)" [value]="option.name">
+                              <div class="planetary-details">
+                                <div class="planet-image">
+                                  <div class="image-of-{{option.name.toLowerCase()}}"></div>
+                                </div>
+                                <div class="planet-stats">
+                                  <div class="planet-name">
+                                    {{option.name}}
+                                  </div>
+                                  <div class="planet-distance">
+                                    Distance: {{option.distance}} megamiles
+                                  </div>
+                                  <div class="planet-already-assigned" *ngIf="planetAlreadyAssigned(option, expedition)">
+                                    This planet has already been assigned for another expedition
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-option>
+                          </div>
+                        </mat-select>
+                    </mat-form-field>
+
+                    <mat-form-field class="mat-select-button" matTooltip="Select a Planet to view the Vehicles that are capable of transporting there" [matTooltipDisabled]="expedition.planet">
+                        <mat-label>Vehicles</mat-label>
+                        <mat-select id="expedition.id" [disabled]="!expedition.planet" [(ngModel)]="expedition.vehicle" [formControl]="vehiclesDropDown" (closed)="onClosingVehiclesDropdown()">
+                          <hr/>  
+                          <mat-form-field class="input-filter">
+                            <input matInput [formControl]="vehicleControl" type="text" name="filter-options" id="filter-options" placeholder="Search">
+                          </mat-form-field>
+                          <hr/>
+                          <div class="vehicle-dropdown">
+                            <mat-option *ngFor="let option of filteredVehicles | async"  [disabled]="vehicleNotAvailable(option.name, expedition).disable" [value]="option.name" #matOption{{option.name}}>
+                              <div class="transportation-details">
+                                <div class="vehicle-image">
+                                  <div class="image-of-{{option.name.split(' ').join('-').toLowerCase()}}"></div>
+                                </div>
+                                <div class="vehicle-stats">
+                                  <div class="vehicle-name">
+                                    {{option.name}} -  <span class="vehicle-units">{{option.total_no}} units</span>
+                                  </div>
+                                  <div class="vehicle-speed">
+                                    {{option.speed}} megamiles / hour
+                                  </div>
+                                  <div class="vehicle-max-distance">
+                                    Range: {{option.max_distance}} megamiles
+                                  </div>
+                                  <div *ngIf="vehicleNotAvailable(option.name, expedition).disable" class="vehicle-incapable">
+                                    {{vehicleNotAvailable(option.name, expedition).message}}
+                                  </div>
+                                </div>
+                              </div>
+                            </mat-option>
+                          </div>
+                        </mat-select>
+                    </mat-form-field>
+                </form>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>

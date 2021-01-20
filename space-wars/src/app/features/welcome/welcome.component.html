@@ -1,0 +1,41 @@
+<mat-dialog-content class="mat-typography">
+  <h3>{{searchStatus}}</h3>
+  <p>
+    King Shan has received intelligence that Al Falcone is in hiding in one of these 6 planets
+  </p>
+  <p>
+    However he has limited resources at his disposal & can send his army to only 4 of these planets.
+  </p>
+  <div class="resource-list">
+    <div class="planets">
+        <div class="planet" *ngFor="let planet of planets | async">
+            <div class="name">
+                {{planet.name}}
+            </div>
+            <div class="distance">
+                {{planet.distance}} miles from Lengaburu
+            </div>
+        </div>
+    </div>
+    <div class="vehicles">
+        <div class="vehicle" *ngFor="let vehicle of vehicles | async">
+            <div class="name">
+                {{vehicle.name}}
+            </div>
+            <div class="units">
+                {{vehicle.total_no}} units
+            </div>
+            <div class="range">
+                {{vehicle.max_distance}} megamiles
+            </div>
+            <div class="speed">
+                {{vehicle.speed}} megamiles / hour
+            </div>
+        </div>
+    </div>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <a class="hyperlink-reference" target="_blank" href="https://www.geektrust.in" mat-dialog-close>Click here to visit Geektrust Website</a>
+  <button mat-button mat-dialog-close cdkFocusInitial>Start Search</button>
+</mat-dialog-actions>

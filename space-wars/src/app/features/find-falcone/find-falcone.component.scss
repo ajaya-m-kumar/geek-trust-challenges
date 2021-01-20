@@ -1,0 +1,148 @@
+.info-and-call-to-action {
+    height: 50px;
+    padding: 20px 10px;
+    .total-time-taken{
+      color: white;
+      font-weight:900;
+      font-size: 16px;
+    }
+    .button{
+      margin-right: 20px;
+      &.pull-right{
+          float: right;
+      }
+    }
+}
+.expeditions {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    height: calc(100vh - 180px);
+    max-width: 100vw;
+    overflow:auto;
+    mat-card{
+      background: url('/assets/images/background.jpg') no-repeat;
+      background-size: 1920px 1080px;
+      box-shadow: 0 0 2px #848498,
+      0 2px 5px#8484A8,
+      0 -2px 5px#848998,
+      -2px 0 5px #8A8498,
+      2px 0 5px #848698;
+      &:hover{
+        box-shadow: 0 0 5px #848498,
+        0 2px 25px#8484A8,
+        0 -2px 25px#848998,
+        -2px 0 25px #8A8498,
+        2px 0 25px #848698;
+      }
+    }
+.expedition-details {
+  width: calc(100vw / 4 - 105px);
+  margin: 10px;
+  .planets-and-vehicles {
+      .planet-not-chosen {
+        width: calc(100vw / 4 - 115px);
+        height: calc(100vh /3 - 50px);
+      }
+      .planet-chosen{
+        width: calc(100vw / 4 - 115px);
+        height: 200px;
+        justify-content: space-between;
+        display: flex;
+        .planet {
+          background: url('/assets/images/planets.png') no-repeat;
+          width: 125px;
+          height: 125px;
+          background-size: 640px 390px;
+          &.planet-donlon{
+            background-position:-24px -61px;
+            filter: drop-shadow(2px 4px 6px silver);
+          }
+          &.planet-enchai{
+            background-position: -142px -214px;
+            filter: drop-shadow(2px 4px 6px silver);
+          }
+          &.planet-pingasor{
+            background-position: -273px -220px;
+            filter: drop-shadow(2px 4px 6px silver);
+          }
+          &.planet-lerbin{
+            background-position: -393px -216px;
+            filter: drop-shadow(2px 4px 6px silver);
+          }
+          &.planet-sapir{
+            filter: drop-shadow(2px 4px 6px silver);
+            background-position: -505px -58px;
+          }
+          &.planet-jebing{
+            filter: drop-shadow(2px 4px 6px silver);
+            background-position: -268px -64px;
+          }
+        }
+        .vehicle{
+          align-self: flex-end;
+          .vehicle-chosen{
+            width: 125px;
+            height: 160px;
+            background: url('/assets/images/vehicles.png') no-repeat;
+            background-size: 577px 433px;
+            &.vehicle-space-pod{
+              filter: drop-shadow(2px 4px 16px silver);
+              background-position:-145px -37px;
+              transform: scale(.4);
+            }
+            &.vehicle-space-shuttle{
+              background-position: -436px -225px;
+            filter: drop-shadow(2px 4px 16px silver);
+            transform: scale(.4);
+            }
+            &.vehicle-space-rocket{
+            filter: drop-shadow(2px 4px 16px silver);
+            background-position: -8px -40px;
+              transform: scale(.4);
+            }
+            &.vehicle-space-ship{
+            filter: drop-shadow(2px 4px 16px silver);
+            transform: scale(.4);
+              background-position: -447px -38px;
+            }
+          }
+        }
+      }
+  }
+  .actions{
+      .mat-select-button{
+        width: calc(100vw / 4 - 115px);
+        // background-color: black;
+        padding: 8px;
+        margin-bottom: 5px;
+        border: grey 2px solid;
+      }
+  }
+}
+}
+mat-form-field{
+    &.input-filter{
+      margin-left: 15px;
+    }
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
